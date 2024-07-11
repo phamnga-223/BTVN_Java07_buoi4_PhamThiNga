@@ -16,7 +16,7 @@ public class Cau1 {
 		System.out.println("Xin vui lòng nhập thông tin các sinh viên: ");
 		System.out.println("*****************************************************");
 		for (int i = 0; i < 3; i++) {
-			System.out.print("Họ tên sinh viên " + (i + 1) + ": "); //Sinh vien i
+			System.out.print("Họ tên sinh viên " + (i + 1) + ": "); //Sinh viên thứ i
 			hoTen[i] = scan.nextLine();
 			
 			System.out.print("Năm sinh của sinh viên " + (i + 1) + ": ");
@@ -38,7 +38,7 @@ public class Cau1 {
 		//B3: So sánh năm sinh
 		int min = namSinh[0];
 		for (int i = 1; i < 3; i++) {
-			if (min > namSinh[i]) {
+			if (min < namSinh[i]) {
 				min = namSinh[i];
 			}
 		}

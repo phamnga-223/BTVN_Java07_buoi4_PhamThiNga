@@ -19,7 +19,7 @@ public class Cau3 {
 		int[] gioiTinh = new int[3];
 		for (int i = 0; i < 3; i++) {
 			System.out.println("Cán bộ thứ " + (i+1) + ": ");
-			System.out.print("Họ tên: "); //Họ tên
+			System.out.print("Họ tên: ");
 			ten[i] = scan.nextLine();
 			//B2: Kiểm tra input đầu vào
 			if (ten[i] == "") {
@@ -48,20 +48,20 @@ public class Cau3 {
 		}
 				
 		//B3: Tìm cán bộ Nam trẻ nhất
-		int min = 2024;
+		int min = 0;
 		for (int i = 0; i < 3; i++) {
-			if (gioiTinh[i] == 0) { //Cán bộ nam có giới tính là 0
-				if (min > namSinh[i]) min = namSinh[i];
+			if (gioiTinh[i] == 0) { //Cán bộ Nam có giới tính là 0
+				if (min < namSinh[i]) min = namSinh[i];
 			}
 		}
 		
 		//B4: In kết quả ra màn hình
-		//TH1: Không có cán bộ nam
-		if (min == 2024) {
+		//TH1: Không có cán bộ Nam
+		if (min == 0) {
 			System.out.println("Không có cán bộ Nam!");
 			return;
 		}
-		//TH2: Có cán bộ nam
+		//TH2: Có cán bộ Nam
 		System.out.println("Cán bộ Nam trẻ nhất là:");
 		for (int i = 0; i < 3; i++) {
 			if (gioiTinh[i] == 0) { //Cán bộ nam có giới tính là 0
